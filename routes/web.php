@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('Cool','Cool\TestController@index');
+Route::group(['namespace'=>'Cool'],function() {
+    Route::get('cool', 'TestController@index');});
 
 Route::pattern('student_no','s[0-9]{10}');
 
