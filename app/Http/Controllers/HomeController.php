@@ -8,5 +8,9 @@ use App\Http\Requests;
 
 class HomeController.php extends Controller
 {
-    //
+    public function index()
+    {
+    return view('welcome');
+    }
 }
+
