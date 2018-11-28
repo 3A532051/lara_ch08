@@ -1,18 +1,19 @@
 <?php
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-<<<<<<< HEAD
-use App\Http\Requests;
-class BoardController extends Controller
-{
-    public function index(){
-        return view('board');
-    }
-}
-=======
+
+use Illuminate\Http\Requests;
+use App\Score as ScoreEloquent;
+use Route;
+use View;
 
 class BoardController extends Controller
 {
-    //
+    public function getIndex(){
+
+        return view::make('board',['scores'=>ScoreEloquent::with
+        ('student')->orderByTotal()->orderByTotal()->orderBySubject()->get()]);
+    }
+    public function getName(){
+        return Route::currentRouteAction();
+    }
 }
->>>>>>> parent of edbf840... ch7 實作練習前準備

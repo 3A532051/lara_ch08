@@ -3,8 +3,7 @@
 <head>
     <title>@yield('title')</title>
     @section('head')
-        @include('partials.head')
-    @show
+    @include('partials.head')
 </head>
 <body>
 @include('partials.nav')

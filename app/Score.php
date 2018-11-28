@@ -15,6 +15,7 @@ class Score extends Model
         return $query->orderBy('score.total','DESC');
     }
     public function scopeOrderBySubject($query){
-        return $query->orderBy('score.chinese','DESC')->orderBy('score.english','DESC')->orderBy('score.math','DESC');
+        return $query->orderBy('score.chinese','DESC')->orderBy('score.english','DESC')
+            ->orderBy('score.math','DESC');
     }
 }
